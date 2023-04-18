@@ -1,0 +1,48 @@
+{
+  "name": "@404-software/basil-icons",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@svgr/core": "^6.5.1",
+    "@types/node": "^18.0.4",
+    "@types/react": "^17.0.2",
+    "react-native-builder-bob": "^0.18.3",
+    "tsx": "^3.12.3",
+    "typescript": "^4.7.4"
+  },
+  "main": "lib/commonjs/index.js",
+  "react-native": "/index.ts",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
+  "scripts": {
+    "prepare": "yarn generate bob build",
+    "generate": "tsx ./generate/index.ts"
+  },
+  "files": [
+    "src",
+    "index.ts",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "dependencies": {
+    "react-native-svg": "13.4.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  }
+}
